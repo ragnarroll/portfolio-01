@@ -44,7 +44,7 @@
 /* Reset and Base Styles */
 * {
   margin: 0px;
-  padding: 20px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -94,6 +94,11 @@ p {
   color: var(--text-primary);
 }
 
+li {
+  margin-left: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
+}
+
 a {
   color: var(--secondary-color);
   text-decoration: none;
@@ -121,7 +126,7 @@ a:hover {
 header {
   background-color: var(--background);
   border-bottom: 1px solid var(--border-color);
-  padding: var(--spacing-md) 0;
+  padding: var(--spacing-md) ;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -191,7 +196,7 @@ nav a.active::after {
 
 /* Section Styles */
 section {
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-xl) ;
 }
 
 .section-title {
