@@ -109,7 +109,6 @@ a:hover {
   color: var(--accent-color);
 }
 
-
 /* Header */
 header {
   background-color: var(--background);
@@ -120,19 +119,6 @@ header {
   z-index: 100;
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.95);
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  font-family: var(--font-heading);
 }
 
 /* Navigation */
@@ -169,21 +155,6 @@ nav a.active::after {
 section {
   padding: var(--spacing-xl) ;
 }
-
-.section-title {
-  text-align: center;
-  margin-bottom: var(--spacing-xl);
-}
-
-.section-title::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: var(--secondary-color);
-  margin: var(--spacing-md) auto 0;
-}
-
 
 /* Button Styles */
 .btn {
