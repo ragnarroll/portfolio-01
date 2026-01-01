@@ -12,22 +12,53 @@ import "../styles/global.css";
 	<title>Michael Pasimio</title>
 
 <style>
+	nav{
+		box-shadow: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	.nav-container {
+	margin-top: var(--spacing-xl);
+	margin-bottom: var(--spacing-xs);
+  	}
+
+	.nav-item {
+    position: relative;
+    padding: 15px 30px;
+    background: var(--background-dark);
+    color: var(--button-text);
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    overflow: hidden;
+	}
+
 </style>
 </head>
 
 <body>		
-	<div class="container">
-		<div class="two-column">
+	<div class="logo">
+		<img src="../turtle-logo-white.png" alt="Turtle Logo" height="60px"/>
+	</div>
+	<div class="two-column">
 			<div class="column">
-				<img src="../profile-no-bg.png" alt="Michael Pasimio" height="150" width="150"/>
+				<img src="../profile-no-bg.png" alt="Michael Pasimio"/>
 			</div>
 			<div class="column">
-				<h2>Michael Pasimio</h2>
-				<p>Learning Designer, Innovator, Educator, Coach</p>
+					<h1>Michael Pasimio</h1>
+					<p>Learning Designer, Innovator, Educator, Coach</p>
+				<nav class="nav-container">
+					<a class="nav-item" href="/projects/">Projects</a>
+					<a class="nav-item" href="/skills/">Skills</a>
+					<a class="nav-item" href="/about/">About me</a>
 			</div>
 		</div>
-	</div>
-	<Header />
+	
 	<section class ="hero">
 		<p>insert mission statement</p>
 		<p>Alright so this here is my first draft of my portfolio. My goals here are to build out the information infrastructure as best as I can and make sure that the simple layout makes sense on mobile. Then I'll focus on adding more stylistic elements and interactive components that make me and my projects come to life. I'll really just think about this first draft as a digital resume or LER.</p>
