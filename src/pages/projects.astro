@@ -1,7 +1,8 @@
 ---
 import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
 import "../styles/global.css";
-
+import "../styles/filter.css";
 ---
 
 <html lang="en">
@@ -17,20 +18,40 @@ import "../styles/global.css";
 		<section>
 			<h1>Projects</h1>
 			<p>This will be a list of my projects, with a short summary and image for each of them.</p>
-		</section>
-		<div>
+		
 			<h2>Systems & Technology</h2>
-			<li>AI & Enrollment Management</li>
-		</div>
-		<div>
+			<li><a href='/projects/test-project/'>AI & Enrollment Management</a></li>
+		
 			<h2>Social Vision</h2>
 			<li>Rutgers University</li>
 			<li>Place-based public universities</li>
 			<li>Cornucopia College</li>
-		</div>
-		<div>
+		
 			<h2>Sports & Health</h2>
 			<li>Lifelong Learning and burnout prevention</li>
-		</div>
+		</section>
+		<section>
+			<h2>Projects</h2>
+
+			<div id="myBtnContainer">
+			<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+			<button class="btn" onclick="filterSelection('Systems')"> Systems & Technology</button>
+			<button class="btn" onclick="filterSelection('Social')"> Social Vision</button>
+			<button class="btn" onclick="filterSelection('Health')"> Sports & Health</button>
+			</div>
+
+			<div class="container">
+			<div class="filterDiv Systems">AI & Enrollment Management</div>
+			<div class="filterDiv Systems">Learning and Employment Records</div>
+			<div class="filterDiv Social">Rutgers University</div>
+			<div class="filterDiv Social">Place-based public universities</div>
+			<div class="filterDiv Health">Lifelong learning and burnout prevention</div>
+			<div class="filterDiv Social">Cornucopia College</div>
+			</div>
+		</section>	
+<Footer />
+<script>
+import "../scripts/filter.js";
+</script>
 	</body>
 </html>

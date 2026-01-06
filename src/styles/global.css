@@ -118,9 +118,7 @@ a:hover {
   display: flex;
   align-items: flex-end;
   justify-content: right;
-  padding-right: var(--spacing-md);
-  padding-top: var(--spacing-xs);
-  padding-bottom: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-xs) 0;
   background-color: var(--background-dark);
 }
 
@@ -487,4 +485,11 @@ section {
   cursor: pointer;
   border: 2px solid blue;
   font-family: var(--font-primary);
+}
+
+/*project*/
+.project {
+  margin: auto;
+  padding: var(--spacing-md);
+  max-width: 80%;
 }
