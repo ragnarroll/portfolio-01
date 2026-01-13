@@ -333,7 +333,7 @@ nav a.active::after {
 /* Parallax Section */
 .parallax {
   /* The image used */
-  background-image: url("../../public/parallax.jpg");
+  background-image: url("../../parallax.jpg");
 
   /* Set a specific height */
   min-height: 650px;

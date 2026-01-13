@@ -120,6 +120,7 @@
     }
 
     .project-card {
+        cursor: pointer;
         background: white;
         border: 2px solid var(--primary);
         border-radius: 5px;
