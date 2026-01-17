@@ -14,6 +14,15 @@ const { projectTitle } = Astro.props;
   </head>
   <body>
     <Header />
+    <div class = "two-column">
+      <div class="column-img">
+				<img src="../favicon.svg" alt="Project Photo"/>
+			</div>
+			<div class="column-text">
+					<h1>{projectTitle}</h1>
+					<p>Learning Designer, Innovator, Educator, Coach</p>
+			</div>
+    </div>
     <slot />
     <Footer />
   </body>

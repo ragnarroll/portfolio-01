@@ -9,7 +9,7 @@
   --secondary: #f4f4f4;
   --accent: #C59570;
   
-  --text: #2a2a2a;
+  --text: #2F3841;
   --text-secondary: #7f8c8d;
 
   --button-text: #ffffff;
@@ -26,8 +26,11 @@
   
   
   /* Typography */
-  --font-primary: 'Work Sans', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  --font-heading: 'K2D', 'Abril Fatface', 'Georgia', 'Times New Roman', serif;
+  --font-primary: 'K2D', 'Spectral', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
+  --font-heading: 'K2D', 'Spectral', sans-serif;
+  --font-serif: 'Rockwell', 'Georgia' serif; 
+  --font-monospace: 'Courier New', Courier, monospace;
   
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -359,7 +362,7 @@ justify-content: right;
 /* parallax box section */
 .about {
   position: relative;
-  padding: var(--spacing-md) 0;
+  padding: var(--spacing-md) var(--spacing-md);
   background-color: var(--background-darkest);
   max-width: 80%;
   margin: var(--spacing-xl) auto var(--spacing-xl) auto;
@@ -373,12 +376,12 @@ justify-content: right;
 
 .about p {
   color: var(--background);
-  text-align: center;
+  text-align: justify;
   max-width: 1200px;
 }
 
 .about p {
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 1.25rem;
 }
 
@@ -409,7 +412,7 @@ justify-content: right;
 
 .sheer-top p {
   margin: auto;
-  font-family: 'K2D', 'Courier New', Courier, monospace;
+  font-family: var(--font-primary);
   color: var(--background);
   font-size: 1.25rem;
   font-weight: 800;
@@ -505,7 +508,7 @@ section {
         max-width: 1400px;
         margin: 0 auto;
         padding: 100px 40px 20px;
-        font-family: 'Work Sans', sans-serif;
+        font-family: var(--font-body);
         background: none;
         color: var(--text);
         line-height: 1.6;
@@ -557,7 +560,7 @@ section {
         border-radius: 5px;
         background: transparent;
         color: var(--primary);
-        font-family: 'Work Sans', sans-serif;
+        font-family: var(--font-monospace);
         font-size: 0.95rem;
         font-weight: 600;
         letter-spacing: 0.05em;
