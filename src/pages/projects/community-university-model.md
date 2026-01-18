@@ -5,8 +5,8 @@ pubDate: Spring 2025
 tagline: 'Transforming higher education from a private good to a public process'
 author: 'Michael Pasimio'
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
+    url: '../../favicon.svg'
+    alt: 'The Astro logo.'
 tags: ["social", "systems"]
 ---
 

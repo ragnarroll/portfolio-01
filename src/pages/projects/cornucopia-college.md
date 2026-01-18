@@ -5,8 +5,8 @@ pubDate: Fall 2024
 tagline: 'A Farm-to-Table University'
 author: 'Michael Pasimio'
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
+    url: '../../favicon.svg'
+    alt: 'The Astro logo.'
 tags: ["social", "systems", "wellness"]
 ---
 
