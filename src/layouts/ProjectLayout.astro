@@ -2,7 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
-const { projectTitle } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 <html lang="en">
   <head>
@@ -10,20 +10,23 @@ const { projectTitle } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{projectTitle}</title>
+    <title>{frontmatter.title}</title>
   </head>
   <body>
     <Header />
     <div class = "two-column">
       <div class="column-img">
-				<img src="../favicon.svg" alt="Project Photo"/>
+				<img src= {frontmatter.image.url} alt="Project Photo"/>
 			</div>
 			<div class="column-text">
-					<h1>{projectTitle}</h1>
-					<p>Learning Designer, Innovator, Educator, Coach</p>
+					<h1>{frontmatter.title}</h1>
+          <p>{frontmatter.tagline}</p>
 			</div>
     </div>
+    <div class = "container-text">
     <slot />
+    </div>
+    
     <Footer />
   </body>
 </html>

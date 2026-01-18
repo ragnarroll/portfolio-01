@@ -1,0 +1,14 @@
+---
+layout: ../../layouts/ProjectLayout.astro
+title: 'Community-University Model'
+pubDate: Spring 2025
+tagline: 'Transforming higher education from a private good to a public process'
+author: 'Michael Pasimio'
+image:
+    url: 'https://docs.astro.build/assets/rose.webp'
+    alt: 'The Astro logo on a dark background with a pink glow.'
+tags: ["social", "systems"]
+---
+
+### Overview
+Since the 1950s, universities have become the primary provider of a private good: the college degree, which enables individuals to advance their careers and increase their earning potential. Recent data on the lifetime earnings of those with a Bachelor’s degree indicate that the earning-enhancing function of universities is well-intact, but often comes with complicated ethical costs for those who come from marginalized backgrounds. Furthermore, disparities in earnings and health outcomes between those with versus without a Bachelor’s degree indicate that an inter-educational divide has developed. Meanwhile, powerful external forces are pressuring the university model to evolve, including a dire financial situation, structural economic shifts, climate change, and the public mistrust of higher education. To address these complex challenges, universities must reject a narrow identity as degree-providers and instead apply their powers of research, training, and organizing towards transforming the infrastructure that moderates educational opportunities and health outcomes. Arizona State University (ASU) exemplifies how a university can transform from a vehicle of individual mobility to a vehicle of public transformation. Since 2002, ASU has implemented a sweeping array of reforms to address global, regional, and local issues while transforming Arizona’s health and education infrastructure.
