@@ -19,7 +19,8 @@
   
   --border: #d4d4d4;
 
-  --background: #f4f4f4;
+  --bg-off-white: #F7F8FA;
+  --background: #ffffff;
   --background-alt: #f8f9fa;
   --background-darkest: #131D28;
   --background-dark: #2F3841;
@@ -60,7 +61,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: var(--font-primary)
+  font-family: var(--font-primary);
 }
 
 html {
@@ -172,7 +173,7 @@ nav{
     padding: 0.75rem 2rem 0.75rem 2rem;
     /* background: var(--background-dark); */
     color: var(--button-text);
-    text-decoration: none;
+    text-decoration: underline;
     border-radius: 10px;
     font-weight: 700;
     font-size: 18px;
@@ -306,10 +307,13 @@ nav a.active::after {
   background-image: url("../assets/hero-healy-sunset.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top right;
   /* margin-top: -55px;*/
-  height: 100vh;
-  text-align: center;
+  padding: var(--spacing-lg) var(--spacing-md);
+  display: flex;
+  justify-content: left;
+  height: 120vh;
+  text-align: left;
 }
 
 .hero::before {
@@ -319,40 +323,41 @@ nav a.active::after {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(3, 13, 34, 0) 100%);
+  height: 120vh;
+  background: var(--background-darkest);
+  opacity: 0.6;
+  /* background: linear-gradient(0deg, rgba(19, 18, 42, 0.9) 10%, rgba(1, 9, 26, 0) 100%); */
 }
 
 .hero-textbox {
   height: 100%;
   position: absolute;
   z-index: 50;
-  border-radius: var(--radius-md);
-
+  max-width: 800px;
+  padding-left: var(--spacing-lg);
+  text-align: left;
   /* 
   background-color: var(--background-darkest);
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
   opacity: 0.85; 
   */
-  padding: var(--spacing-lg);
-  text-align: left;
+  
   
 }
 
 .hero-textbox h3 {
   color: var(--button-text);
   margin-bottom: var(--spacing-sm);
-  max-width: 600px;
+  font-size: 2.8rem;
 }
 
 .hero-textbox p {
   color: var(--button-text);
-  margin-bottom: var(--spacing-sm);
-  font-size: 1.35rem;
-  max-width: 800px;
+  margin-bottom: 0;
+  font-size: 1.8rem;
 }
 
-/* parallax box section */
+/* parallax box section 
 .about {
   position: relative;
   padding: var(--spacing-md) var(--spacing-md);
@@ -378,25 +383,23 @@ nav a.active::after {
   font-size: 1rem;
 }
 
-/* Parallax Section */
+*/
+
+
+/* Parallax Section 
 .parallax {
-  /* The image used */
   background-image: url("../assets/parallax.jpg");
-
-  /* Set a specific height */
   min-height: 650px;
-
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0;
 }
-
+*/
 
 /* Project Areas Section */
-/*.three-column {
+.three-column {
   column-count: 3;
   text-align: center;
   display: flex;
@@ -404,10 +407,8 @@ nav a.active::after {
   max-width: 90%;
   margin: auto;
   padding: 50px;
-  
-
 }
-*/
+
 .three-column {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -415,7 +416,7 @@ nav a.active::after {
   max-width: 1400px;
   margin: auto;
   padding: 0px 40px 50px;
-  background: none;
+  background: var(--bg-off-white);
 }
 
 .column-project {
@@ -424,7 +425,7 @@ nav a.active::after {
   align-content: center;
   padding-left: var(--spacing-sm);
   padding-right: var(--spacing-sm);
-  background-color: var(--background-alt);
+  background-color: var(--background);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
@@ -450,13 +451,14 @@ nav a.active::after {
 
 /* Section Styles */
 section {
-  padding-top: var(--spacing-xl);
-  padding-bottom: var(--spacing-xl);
-  text-align: center;
+  padding-top: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+  text-align: left;
+  background: var(--bg-off-white);
 }
 
 .section-title {
-  text-align: center;
+  text-align: left;
 }
 
 .section-title::after {
@@ -464,8 +466,8 @@ section {
   display: block;
   width: 160px;
   height: 3px;
-  background-color: var(--accent);
-  margin: var(--spacing-xs) auto var(--spacing-lg);
+  background: var(--accent);
+  margin-bottom: var(--spacing-lg);
 }
 
 /* Button Styles */
@@ -489,13 +491,15 @@ section {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 100px 40px 20px;
+  padding: 50px 40px 20px;
   font-family: var(--font-body);
-  background: none;
-  color: var(--text);
-  line-height: 1.6;
+  background: var(--background);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  /* line-height: 1.6; */
+  text-align: left;
   }
 
 .container-text {
@@ -506,6 +510,7 @@ font-family: var(--font-body);
 background: none;
 color: var(--text);
 line-height: 1.6;
+
 }
 /*
 h1 {
