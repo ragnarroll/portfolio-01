@@ -192,6 +192,8 @@ nav{
 	flex-direction: row;
 	justify-content: center;
   align-items: center;
+  border-radius: 10px;
+  padding: 10px 20px;
 	/* margin-right: 5%; */
   /* flex-wrap: wrap; */
   gap: 10px;
@@ -371,6 +373,16 @@ Project Areas Section
 ======================================================================
 ======================================================================
 */
+
+.beliefs {
+  display: block;
+  max-width: 1400px;
+  margin: auto;
+  text-align: left;
+  padding: 50px;
+}
+
+/*
 .three-column {
   column-count: 3;
   text-align: center;
@@ -390,9 +402,12 @@ Project Areas Section
   padding: 0px 40px 50px;
   background: var(--bg-off-white);
 }
+*/
 
 .column-project {
-  height: 200px;
+  height: 150px;
+  margin: auto;
+  margin-bottom: var(--spacing-lg);
   display: flexbox;
   align-content: center;
   padding-left: var(--spacing-sm);
@@ -409,6 +424,16 @@ Project Areas Section
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   color: white;
   cursor: pointer;
+  background: var(--background-dark);
+  opacity: 0;
+  animation: dark 0.3s ease-in-out forwards;
+}
+
+
+@keyframes dark {
+  to {
+    opacity: 1;
+  }
 }
 
 /* Make it stack on mobile 
@@ -483,9 +508,13 @@ Container Styles (about me, etc.)
   min-width: 0;
 }
 
+.container-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-xs);
+}
+
 .container-img {
   grid-column: span 1;
-  background-image: url("../../public/clark-hs.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -495,6 +524,18 @@ Container Styles (about me, etc.)
   max-width: 400px;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
+}
+
+.clark{
+background-image: url("../../public/clark-hs.jpg");
+}
+
+.healy {
+  background-image: url("../../public/healy-sunflare.jpg");
+}
+
+.car-barn{
+  background-image: url("../../public/car-barn.jpg");
 }
 
 @media (max-width: 900px) {
