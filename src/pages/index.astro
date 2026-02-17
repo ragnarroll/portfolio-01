@@ -61,12 +61,23 @@ import "../styles/global.css";
 
 <!-- ABOUT ME SECTION -->
 <section>
-	<div class = "container">
+	<div class = "container-home">
 		<div class="container-title">
 			<h2>About Me</h2>
 			<p><em>My Educational Journey</em></p>
 		</div>
-		<p>Born and raised in Las Vegas, Nevada, I grew up in one of the <strong>lowest performing school districts</strong> in the US.</p>
+		<span class="container-text">
+			<p>Born and raised in Las Vegas, Nevada, I grew up in one of the <strong>lowest performing school districts</strong> in the US.</p>
+		</span>
+		<span class="container-img"></span>
+		<span class="container-img"></span>
+		<span class="container-text">
+			<p>Like many high-achieving students, I set my sights on an <strong>elite college.</strong> </p>
+		</span>
+		<span class="container-text">
+			<p>Now in a Master's in Learning Design and Technology, my focus is on designing programs that <strong>expand access</strong> to higher education.</p>
+		</span>
+		<span class="container-img"></span>
 	</div>
 </section>
 
@@ -90,5 +101,11 @@ import "../styles/global.css";
 	</div>
 </section>
 	<Footer />
+
+	<script>
+		import { initScrollMenu } from '../scripts/scroll-menu.js';
+		initScrollMenu();
+	</script>
+
 </body>
 </html>

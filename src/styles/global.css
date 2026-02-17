@@ -162,9 +162,11 @@ Footer and Header
 /* Header */
 header {
   position: fixed;
-  top: 20px;
-  right: 0px;
+  top: 40px;
+  right: 50%;
+  translate: 50% -50%;
   z-index: 100;
+  
   /* 
   backdrop-filter: blur(10px);
   */
@@ -188,22 +190,21 @@ nav{
 	margin-bottom: 0;
 	display: flex;
 	flex-direction: row;
-	justify-content: right;
+	justify-content: center;
   align-items: center;
-	margin-right: 5%;
+	/* margin-right: 5%; */
   /* flex-wrap: wrap; */
   gap: 10px;
   	}
 
 	.nav-item {
 	  position: relative;
-    padding: 0.75rem 2rem 0.75rem 2rem;
-    /* background: var(--background-dark); */
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background: var(--background-dark); 
     color: var(--button-text);
-    text-decoration: underline;
     border-radius: 10px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 14px;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -318,11 +319,11 @@ Hero Section
   background-repeat: no-repeat;
   background-position: top center;
   /* margin-top: -55px;*/
-  padding: var(--spacing-lg) var(--spacing-md);
+  padding-top: 10%;
+  padding-left: 10%;
   display: flex;
   justify-content: left;
-  height: 120vh;
-  text-align: left;
+  height: 100vh;
 }
 
 .hero::before {
@@ -332,9 +333,9 @@ Hero Section
   top: 0;
   left: 0;
   width: 100%;
-  height: 120vh;
+  height: 100vh;
   /* background: var(--background-darkest); */
-  opacity: 0.6;
+  opacity: 0.7;
    background: linear-gradient(0deg, var(--background-dark) 50%, var(--background-darkest) 100%); 
 }
 
@@ -343,7 +344,6 @@ Hero Section
   position: absolute;
   z-index: 50;
   max-width: 800px;
-  padding-left: var(--spacing-lg);
   text-align: left;
   /* 
   background-color: var(--background-darkest);
@@ -431,6 +431,19 @@ Container Styles (about me, etc.)
 */
 
 .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 40px 20px;
+  font-family: var(--font-body);
+  background: none;
+  color: var(--text);
+  line-height: 1.6;
+  }
+
+.container-home {
+  display: grid;
+  grid-template-columns: repeat(3, 0.9fr);
+  gap: 24px;
   max-width: 90%;
   margin: 0 auto;
   padding: 50px 40px 20px;
@@ -438,24 +451,15 @@ Container Styles (about me, etc.)
   background: var(--background);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  /* line-height: 1.6; */
+  align-items: start;
   text-align: left;
-  }
-
-.container-text {
-max-width: 1000px;
-margin: 0 auto;
-padding: 100px 40px 20px;
-font-family: var(--font-body);
-background: none;
-color: var(--text);
-line-height: 1.6;
 }
 
 .container-title {
   text-align: left;
   position: relative;
   display: inline;
+  grid-column: span 3;
 }
 
 .container-title::after {
@@ -468,6 +472,61 @@ line-height: 1.6;
   top: 5px;
   left: -20px;
 }
+
+.container-text {
+  grid-column: span 2;
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px 12px;
+  min-width: 0;
+}
+
+.container-img {
+  grid-column: span 1;
+  background-image: url("../../public/clark-hs.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  min-height: 200px;
+  min-width: 300px;
+  max-width: 400px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 900px) {
+  .container-home {
+    grid-template-columns: 1fr;
+  }
+  .container-title,
+  .container-text,
+  .container-img {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-home {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+  }
+  .container-title,
+  .container-text,
+  .container-img {
+    grid-column: 1 / -1;
+  }
+  .container-img {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+
+
 
 /* 
 ======================================================================
@@ -772,10 +831,10 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  /* .container {
+   .container {
       padding: 40px 20px;
   }
-*/
+
   h1 {
       font-size: 3rem;
   }
