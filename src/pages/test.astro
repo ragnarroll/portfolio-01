@@ -1,0 +1,50 @@
+---
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import "../styles/global.css";
+---
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width" />
+	<meta name="generator" content={Astro.generator} />
+	<title>Michael Pasimio Portfolio</title>
+
+</head>
+
+<body>
+<Header />
+<div>
+    <h1>Test Page div in H1</h1>
+    <p>This is a test page in p.</p>
+</div>
+
+<section>
+    this is what a section looks like
+</section>
+
+<div class="container-home">
+    This is what the container home looks like
+</div>
+
+<section>
+    <div class ="container-home">
+        This is what a section with container home looks like
+    </div>
+</section>
+
+<Footer />
+<script>
+    console.log("Test page script running");
+    document.body.style.padding="50px";
+</script>
+
+</body>
+
+
+</html>

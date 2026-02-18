@@ -100,7 +100,6 @@ h3 {
 }
 
 p {
-  margin-bottom: var(--spacing-sm);
   color: var(--text);
 }
 
@@ -168,7 +167,6 @@ header {
   right: 50%;
   translate: 50% -50%;
   z-index: 100;
-  
   /* 
   backdrop-filter: blur(10px);
   */
@@ -319,9 +317,10 @@ Hero Section
   background-image: url("../assets/hero-mojave.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: bottom center;
   /* margin-top: -55px;*/
-  padding: 10%;
+  padding-top: 14%;
+  padding-left: 10%;
   display: flex;
   justify-content: left;
   height: 100vh;
@@ -340,10 +339,22 @@ Hero Section
    background: linear-gradient(0deg, var(--background-dark) 50%, var(--background-darkest) 100%); 
 }
 
+.hero::after {
+  content: '';
+  z-index: 11;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: #fbd044;
+  opacity: 0.5;
+
+}
+
 .hero-textbox img {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
   margin-bottom: var(--spacing-sm);
 }
 
@@ -362,13 +373,11 @@ Hero Section
 
 .hero-textbox h3 {
   color: var(--button-text);
-  margin-bottom: var(--spacing-sm);
   font-size: 2.8rem;
 }
 
 .hero-textbox p {
   color: var(--button-text);
-  line-height: 1.5;
   font-size: 1.8rem;
 }
 
@@ -419,9 +428,10 @@ Container Styles (about me, etc.)
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 60px 24px;
-  max-width: 90%;
+  max-width: 900px;
+  width: 95%;
   margin: 0 auto;
-  padding: 50px 40px 20px;
+  padding: 50px 40px 50px;
   font-family: var(--font-body);
   background: var(--background);
   border-radius: var(--radius-lg);
@@ -477,15 +487,15 @@ Container Styles (about me, etc.)
 }
 
 .clark{
-background-image: url("../../public/clark-hs.jpg");
+background-image: url("../../clark-hs.jpg");
 }
 
 .healy {
-  background-image: url("../../public/healy-sunflare.jpg");
+  background-image: url("../../healy-sunflare.jpg");
 }
 
 .car-barn{
-  background-image: url("../../public/car-barn.jpg");
+  background-image: url("../../car-barn.jpg");
 }
 
 .smaller {
@@ -493,15 +503,15 @@ background-image: url("../../public/clark-hs.jpg");
 }
 
 .project-1{
-  background-image: url("../../public/social.jpg");
+  background-image: url("../../social.jpg");
 }
 
 .project-2{
-  background-image: url("../../public/tech.jpg");
+  background-image: url("../../tech.jpg");
 }
 
 .project-3{
-  background-image: url("../../public/tree.jpg");
+  background-image: url("../../tree.jpg");
 }
 
 @media (max-width: 900px) {
@@ -551,7 +561,7 @@ Section Base Styles
 
 section {
   padding-top: var(--spacing-lg);
-  padding: var(--spacing-lg) var(--spacing-lg) 0 var(--spacing-lg);
+  padding: var(--spacing-lg) var(--spacing-md) 0 var(--spacing-md);
   padding-bottom: var(--spacing-lg);
   background: var(--bg-off-white);
 }
@@ -717,7 +727,7 @@ h1 {
   cursor: pointer;
   background: var(--background);
   border: 2px solid var(--primary);
-  border-radius: 5px;
+  border-radius: var(--radius-md);
   padding: 40px;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;

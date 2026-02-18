@@ -1,3 +1,5 @@
+
+
 // projects-filter.js - Standalone filtering logic for Astro
 
 export function initProjectFilters() {
