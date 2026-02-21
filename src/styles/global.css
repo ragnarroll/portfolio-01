@@ -163,13 +163,11 @@ Footer and Header
 /* Header */
 header {
   position: fixed;
-  top: 40px;
-  right: 50%;
-  translate: 50% -50%;
+  top: 20px;
+  right: 50px;
   z-index: 100;
-  /* 
-  backdrop-filter: blur(10px);
-  */
+  /* translate: 50% -50%;*/
+  /* backdrop-filter: blur(10px); */
 }
 
 
@@ -194,19 +192,21 @@ nav{
   align-items: center;
   border-radius: 10px;
   padding: 10px 20px;
+  gap: 10px;
 	/* margin-right: 5%; */
   /* flex-wrap: wrap; */
-  gap: 10px;
+  
   	}
 
 	.nav-item {
 	  position: relative;
     padding: 0.5rem 1rem 0.5rem 1rem;
-    background: var(--background-dark); 
-    color: var(--button-text);
+    background: var(--background); 
+    backdrop-filter: blur(10px);
+    color: var(--primary);
     border-radius: 10px;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -236,6 +236,10 @@ nav{
 		opacity: 1;
 	}
 
+  .nav-hero{
+    background: transparent;
+    color: var(--button-text);
+  }
 
 	/* Bounces the menu item just a little bit more down when translating it */
 	@keyframes bounce {
@@ -255,9 +259,9 @@ nav{
 @media (max-width: 768px) {
   header {
     position: fixed;
-    top: 5%;
-    right: 50%;
-    translate: 50% -35%;
+    top: 20px;
+    right: 30px;
+    /* translate: 50% -35%; */
   }
   
   .nav-container {
@@ -440,12 +444,44 @@ Container Styles (about me, etc.)
   text-align: left;
 }
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0.8;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0.8;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .about-me-container{
   translate: -50px 0px;
+  opacity: 0;
+}
+
+.about-me-container.animate-in {
+  animation: slideInLeft 0.5s ease-out forwards;
 }
 
 .my-beliefs-container{
   translate: 50px 0px;
+  opacity: 0;
+}
+
+.my-beliefs-container.animate-in {
+  animation: slideInRight 0.5s ease-out forwards;
 }
 
 .container-title {
@@ -522,7 +558,7 @@ background-image: url("../../clark-hs.jpg");
   background-image: url("../../tree.jpg");
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .container-home {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -537,10 +573,18 @@ background-image: url("../../clark-hs.jpg");
     margin: auto;  
     width: 75%;
   }
-  
+  .about-me-container{
+  translate: 0px 0px;
+  opacity: 0;
+  }
+  .my-beliefs-container{
+  translate: 0px 0px;
+  opacity: 0;
+  }
+
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .container-home {
     grid-template-columns: 1fr;
   }
@@ -554,6 +598,15 @@ background-image: url("../../clark-hs.jpg");
     margin: auto;  
     width: 75%;
   }
+   .about-me-container{
+  translate: 0px 0px;
+  opacity: 0;
+  }
+  .my-beliefs-container{
+  translate: 0px 0px;
+  opacity: 0;
+  }
+
 }
 
 

@@ -8,9 +8,9 @@ export function initScrollMenu() {
         ([entry]) => {
             navItems.forEach(item => {
                 if (entry.isIntersecting) {
-                    item.style.backgroundColor = 'transparent';
+                    item.classList.add('nav-hero');
                 } else {
-                    item.style.backgroundColor = 'var(--primary)';
+                    item.classList.remove('nav-hero');
                 }
             });
         },
