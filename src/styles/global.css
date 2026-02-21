@@ -440,6 +440,14 @@ Container Styles (about me, etc.)
   text-align: left;
 }
 
+.about-me-container{
+  translate: -50px 0px;
+}
+
+.my-beliefs-container{
+  translate: 50px 0px;
+}
+
 .container-title {
   position: relative;
   display: inline;
