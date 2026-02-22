@@ -1,6 +1,7 @@
 ---
 import ProjectLayout from '../../layouts/ProjectLayout.astro';
 import { projects } from '../../data/projects.js';
+import '../../styles/global.css';
 
 const slug = Astro.params.slug || Astro.url.pathname.split('/').filter(Boolean).pop();
 const project = projects.find(p => p.slug === 'learning-employment-records');
