@@ -44,7 +44,7 @@ import "../styles/global.css";
                         data-tags={project.tags.join(' ')}
                     >
                         <div class="project-type">{project.type}</div>
-                        <img src={project.image} alt={project.title} />
+                        <img class = "project-image" src={project.image} alt={project.title} style={`view-transition-name: ${project.slug}`}/>
                         <h2 class="project-title">{project.title}</h2>
                         <p class="project-description">{project.description}</p>
                         <div class="project-tags">
