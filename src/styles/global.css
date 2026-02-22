@@ -2,6 +2,11 @@
    Modern Portfolio CSS Stylesheet
    =================================== */
 
+
+@view-transition {
+    navigation: auto;
+  }
+
 /* CSS Variables for easy customization */
 :root {
   /* Colors */
@@ -831,6 +836,13 @@ h1 {
   border: none;
   overflow: hidden;
   pointer-events: none;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: var(--radius-sm);
 }
 
 .project-title {
