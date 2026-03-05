@@ -462,7 +462,7 @@ Container Styles (about me, etc.)
 .container-home {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: flex-start;
+  align-items: center;
   gap: 20px 24px;
   /* max-width: 900px;
   */
@@ -562,8 +562,15 @@ Container Styles (about me, etc.)
   line-height: 1.1;
 }
 
+.container-text h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: var(--spacing-xs);
+}
+
 .container-text h3 {
   font-size: 1.5rem;
+  font-weight: 400;
   margin-bottom: var(--spacing-xs);
 }
 
