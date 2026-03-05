@@ -18,38 +18,36 @@ import "../styles/global.css";
 
 <body>
     <Header />
-    <div class="container">
+    <div class="title-project-page">
         <h1>Projects</h1>
         <p class="subtitle"></p>
-    <div class="filter-section">
-        <div class="filter-label">Filter by Category <span id="projectCount" class="count-badge">{projects.length} Projects</span></div>
-        <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="social">Social Vision & Strategy</button>
-            <button class="filter-btn" data-filter="systems">Systems & Technology</button>
-            <button class="filter-btn" data-filter="wellness">Sports & Wellness</button>
-        </div>
-    </div>
     </div>
 
     <div class="container-project">
+        <div class="filter-section">
+            <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="social">Social Vision & Strategy</button>
+            <button class="filter-btn" data-filter="systems">Systems & Technology</button>
+            <!--  <button class="filter-btn" data-filter="wellness">Sports & Wellness</button>-->
+            </div>
+        </div>
         <div class="projects-grid" id="projectsGrid">
             {projects.map((project, index) => (
                 <a href={`/projects/${project.slug}`}
                    class="project-card"
-                   data-tags={project.tags.join(' ')}
+                   data-tags={project.skillTags.join(' ')}
                 >
                     <div 
                         style={`animation-delay: ${index * 0.1}s`}
-                        data-tags={project.tags.join(' ')}
+                        data-tags={project.skillTags.join(' ')}
                     >
-                        
-                        <img class = "project-image" src={project.image} alt={project.title} style={`view-transition-name: ${project.slug}`}/>
                         <div class="project-type">{project.type}</div>
                         <h2 class="project-title">{project.title}</h2>
-                        <div class="project-tags">
+                        <img class = "project-image" src={project.image} alt={project.title} style={`view-transition-name: ${project.slug}`}/>
+                        <div class="skill-tags">
                             {project.tags_display.map(tag => (
-                                <span class="tag">{tag}</span>
+                                <span class="skill-tag">{tag}</span>
                             ))}
                         </div>
                        
@@ -57,9 +55,11 @@ import "../styles/global.css";
                 </a>
             ))}
            
-           <!-- removed description & year from cards 
+           <!-- removed description & year from cards & type
                 <p class="project-description">{project.description}</p> 
                 <div class="project-year">{project.year}</div>
+                
+                <div class="filter-label">Filter by Category <span id="projectCount" class="count-badge">{projects.length} Projects</span></div>
             -->
         </div>
     </div>

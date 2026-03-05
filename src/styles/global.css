@@ -2,39 +2,6 @@
    Modern Portfolio CSS Stylesheet
    =================================== */
 
-
-/* @view-transition {
-    navigation: auto;
-
-@keyframes view-transition-fade-in {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes view-transition-fade-out {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-::view-transition-old {
-    animation: view-transition-fade-out 0.3s ease-out forwards;
-}
-
-::view-transition-new {
-    animation: view-transition-fade-in 0.3s ease-out forwards;
-}
-  }
-*/
-
-
 /* CSS Variables for easy customization */
 :root {
   /* Colors */
@@ -78,7 +45,7 @@
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
   --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
-  --shadow-lg-dark: 12px 12px 0px rgba(26, 26, 26, 0.1);
+  --shadow-lg-dark: -12px 12px 0px rgba(26, 26, 26, 0.1);
   
   /* Transitions */
   --transition-fast: 150ms ease-in-out;
@@ -159,22 +126,6 @@ a:hover {
   color: var(--accent);
 }
 
-
-/* 
-======================================================================
-
-======================================================================
-
-======================================================================
-
-Homepage styles
-
-======================================================================
-
-======================================================================
-
-======================================================================
-*/
 
 /* 
 ======================================================================
@@ -353,6 +304,36 @@ nav a {
 /* 
 ======================================================================
 ======================================================================
+Universal Styles
+======================================================================
+======================================================================
+*/
+
+section {
+  padding: 4% 8%;
+  background: var(--bg-off-white);
+}
+
+
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  text-align: center;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  border: 2px solid blue;
+  font-family: var(--font-primary);
+}
+
+
+
+/* 
+======================================================================
+======================================================================
 Hero Section 
 ======================================================================
 ======================================================================
@@ -363,9 +344,9 @@ Hero Section
   background-image: url("../assets/hero-mojave-small.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom center;
+  background-position: top center;
   /* margin-top: -55px;*/
-  padding-top: 14%;
+  padding-top: 10%;
   padding-left: 10%;
   display: flex;
   justify-content: left;
@@ -432,11 +413,23 @@ Hero Section
   margin-bottom: var(--spacing-xs);
 }
 
+
+
+/* 
+======================================================================
+Mobile for Hero Section
+======================================================================
+*/
+
+
 @media (max-width: 768px) {
   .hero {
     padding-top: 20%;
   }
 }
+
+
+
 
 /* 
 ======================================================================
@@ -464,29 +457,21 @@ Container Styles (about me, etc.)
 ======================================================================
 */
 
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 100px 40px 20px;
-  font-family: var(--font-body);
-  background: none;
-  color: var(--text);
-  line-height: 1.6;
-  }
+
 
 .container-home {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  gap: 60px 24px;
-  max-width: 900px;
-  width: 95%;
+  align-items: flex-start;
+  gap: 20px 24px;
+  /* max-width: 900px;
+  */
   margin: 0 auto;
-  padding: 60px 40px;
+  padding: 40px 40px;
   font-family: var(--font-body);
   background: var(--background);
   border-radius: var(--radius-lg);
-  border: 2px solid var(--primary);
+  border: 0.5px solid var(--primary);
   box-shadow: var(--shadow-lg-dark);
   text-align: left;
 }
@@ -537,12 +522,14 @@ Container Styles (about me, etc.)
   position: relative;
   display: inline;
   grid-column: span 3;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
 }
 
 .container-title h2 {
   margin-bottom: 0.25rem;
-  font-weight: 800;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .container-title p {
@@ -551,7 +538,7 @@ Container Styles (about me, etc.)
   font-weight: 600;
 }
 
-
+/*
 .container-title::after {
   content: '';
   display: block;
@@ -562,6 +549,7 @@ Container Styles (about me, etc.)
   top: 0;
   left: -20px;
 }
+  */
 
 .light-blue.container-title::after {
   background: var(--accent-3);
@@ -571,6 +559,7 @@ Container Styles (about me, etc.)
   grid-column: span 2;
   font-family: var(--font-body);
   min-width: 0;
+  line-height: 1.1;
 }
 
 .container-text h3 {
@@ -677,89 +666,50 @@ background-image: url("../../clark-hs.jpg");
 /* 
 ======================================================================
 ======================================================================
-Section Base Styles
+======================================================================
+Project Page styles
+======================================================================
 ======================================================================
 ======================================================================
 */
 
-section {
-  padding: var(--spacing-xl) var(--spacing-md) 0 var(--spacing-md);
-  padding-bottom: var(--spacing-lg);
-  background: var(--bg-off-white);
+/*
+======================================================================
+======================================================================
+ Title section for project page 
+======================================================================
+======================================================================
+*/
+
+.title-project-page {
+  margin: 0 auto;
+  padding: 8% 4% 20px;
+  text-transform: uppercase;
+  background: var(--bg-off-white); 
+  }
+
+.title-project-page h1::after {
+  content: '';
+  display: block;
+  background: var(--accent);
+  height: 4px;
+  width: clamp(250px, 27vw, 350px);
+  position: relative;
+  top: 5px;
+  }
+
+.title-project-page h1 {
+  font-weight: 400;
 }
 
 /*
-.section-title {
-  text-align: center;
-}
-
-.section-title::after {
-  content: '';
-  display: flex;
-  margin: auto;
-  width: 160px;
-  height: 3px;
-  background: var(--accent);
-  margin-bottom: var(--spacing-lg);
-}
-*/
-/* 
-======================================================================
-======================================================================
-Accessories
-======================================================================
-======================================================================
-*/
-
-/* Button Styles */
-.btn {
-  display: inline-block;
-  padding: var(--spacing-sm) var(--spacing-lg);
-  border-radius: var(--radius-sm);
-  font-weight: 500;
-  text-align: center;
-  transition: all var(--transition-base);
-  cursor: pointer;
-  border: 2px solid blue;
-  font-family: var(--font-primary);
-}
-
-/* 
-======================================================================
-
-======================================================================
-
-======================================================================
-
-Project Page styles
-
-======================================================================
-
-======================================================================
-
-======================================================================
-*/
-
-/*project*/
 .project {
   margin: auto;
   padding: var(--spacing-md);
   max-width: 80%;
 }
-
-/*
-h1 {
-  font-family: 'Abril Fatface', serif;
-  font-size: clamp(3rem, 8vw, 7rem);
-  font-weight: 400;
-  line-height: 0.9;
-  letter-spacing: -0.03em;
-  color: var(--primary);
-  margin-bottom: 20px;
-  text-align: center;
-  text-transform: uppercase;
-}
 */
+
 .subtitle {
   font-size: 1.2rem;
   font-weight: 300;
@@ -768,9 +718,16 @@ h1 {
   color: var(--accent);
 }
 
+/*
+======================================================================
+======================================================================
+ Filter section
+======================================================================
+======================================================================
+*/
+
 .filter-section {
-  margin-top: 40px;
-  margin-bottom: 0px;
+  margin-bottom: 40px;
 }
 
 .filter-label {
@@ -785,20 +742,25 @@ h1 {
 .filter-buttons {
   display: flex;
   flex-wrap: wrap;
+  /*
   gap: 12px;
+  */
 }
 
 .filter-btn {
-  padding: 12px 28px;
-  border: 2px solid var(--primary);
-  border-radius: 5px;
+  padding: 12px 12px;
+  border: 1px solid var(--primary);
+  
   background: var(--background);
   color: var(--primary);
-  font-family: var(--font-monospace);
+  font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  text-transform: uppercase; 
+  /* 
+  border-radius: 5px;
+  letter-spacing: 0.05em; 
+  */
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -832,25 +794,40 @@ h1 {
   background: var(--primary);
 }
 
+/*
+======================================================================
+======================================================================
+ Project Grid and Cards
+======================================================================
+======================================================================
+*/
+
 .container-project{
-  max-width: 1400px;
   margin: 0 auto;
-  padding: 0px 40px 50px;
+  padding: 0px 4% 50px;
   background: var(--bg-off-white);
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-rows: 250px;
+  grid-auto-rows: 250px;
+  /* 
+  gap: 10px;
+  */
 }
 
 .project-card {
   cursor: pointer;
   background: var(--background);
+  border: 2px solid var(--border);
+  padding: 10px;
+  /* 
   border: 2px solid var(--primary);
   border-radius: var(--radius-md);
-  padding: 40px;
+  padding: 20px; 
+  */
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -894,29 +871,32 @@ h1 {
   pointer-events: none;
 }
 
-.project-image {
-  width: 100%;
-  height: auto;
+.project-type {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--background-darkest);
   margin-bottom: 20px;
-  border-radius: var(--radius-sm);
 }
 
 .project-title {
   font-family: var(--font-serif);
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 16px;
   color: var(--primary);
 }
 
-.project-type {
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent);
+.project-image {
+  display: none;
+  width: 100%;
+  height: auto;
   margin-bottom: 20px;
+  /*
+  border-radius: var(--radius-sm);
+  */
 }
 
 .project-description {
@@ -927,14 +907,16 @@ h1 {
   font-weight: 300;
 }
 
-.project-tags {
+.skill-tags {
   display: flex;
+  position: absolute;
+  bottom: 10px;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 20px;
 }
 
-.tag {
+.skill-tag {
   padding: 6px 14px;
   background: var(--secondary);
   border: 1px solid var(--border);
@@ -944,6 +926,8 @@ h1 {
   color: var(--text);
 }
 
+
+/*
 .project-year {
   font-size: 0.9rem;
   font-weight: 600;
@@ -951,17 +935,8 @@ h1 {
   margin-top: 12px;
 }
 
-.count-badge {
-  display: inline-block;
-  padding: 4px 12px;
-  background: var(--accent);
-  color: white;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  margin-left: 12px;
-  animation: pulse 2s ease-in-out infinite;
-}
+
+*/
 
 @keyframes fadeInUp {
   from {
@@ -1180,3 +1155,77 @@ nav a.active::after {
     width: 100%;
   }
 }*/
+
+/* .count-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--accent);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-left: 12px;
+  animation: pulse 2s ease-in-out infinite;
+} */
+
+/*
+.section-title {
+  text-align: center;
+}
+
+.section-title::after {
+  content: '';
+  display: flex;
+  margin: auto;
+  width: 160px;
+  height: 3px;
+  background: var(--accent);
+  margin-bottom: var(--spacing-lg);
+}
+*/
+
+
+/* @view-transition {
+    navigation: auto;
+
+@keyframes view-transition-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes view-transition-fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+::view-transition-old {
+    animation: view-transition-fade-out 0.3s ease-out forwards;
+}
+
+::view-transition-new {
+    animation: view-transition-fade-in 0.3s ease-out forwards;
+}
+  }
+*/
+
+/*
+h1 {
+  font-family: 'Abril Fatface', serif;
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--primary);
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+*/
