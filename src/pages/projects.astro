@@ -26,9 +26,12 @@ import "../styles/global.css";
     <div class="container-project">
         <div class="filter-section">
             <div class="filter-buttons">
-            <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="social">Social Vision & Strategy</button>
-            <button class="filter-btn" data-filter="systems">Systems & Technology</button>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="social">Social</button>
+            <button class="filter-btn" data-filter="systems">Systems</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+            <button class="filter-btn" data-filter="tech">Tech</button>
+            <button class="filter-btn" data-filter="policy">Policy</button>
             <!--  <button class="filter-btn" data-filter="wellness">Sports & Wellness</button>-->
             </div>
         </div>
@@ -45,6 +48,7 @@ import "../styles/global.css";
                         <div class="project-type">{project.type}</div>
                         <h2 class="project-title">{project.title}</h2>
                         <img class = "project-image" src={project.image} alt={project.title} style={`view-transition-name: ${project.slug}`}/>
+                        <p class="project-description">{project.description}</p> 
                         <div class="skill-tags">
                             {project.tags_display.map(tag => (
                                 <span class="skill-tag">{tag}</span>
@@ -56,7 +60,7 @@ import "../styles/global.css";
             ))}
            
            <!-- removed description & year from cards & type
-                <p class="project-description">{project.description}</p> 
+                
                 <div class="project-year">{project.year}</div>
                 
                 <div class="filter-label">Filter by Category <span id="projectCount" class="count-badge">{projects.length} Projects</span></div>

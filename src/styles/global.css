@@ -45,7 +45,7 @@
   /* Shadows */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
-  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 5px 5px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg-dark: -12px 12px 0px rgba(26, 26, 26, 0.1);
   
   /* Transitions */
@@ -179,7 +179,7 @@ Navigation Menu
 ======================================================================
 */
 nav{
-		box-shadow: none;
+		box-shadow: none; 
 		padding-bottom: 10px;
 		margin: 0;
 	}
@@ -379,7 +379,7 @@ Hero Section
 .hero-textbox h3 {
   color: var(--text);
   font-size: clamp(1.5rem, 6vw, 2rem);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
   margin-bottom: var(--spacing-sm);
 }
 
@@ -401,7 +401,7 @@ Hero Section
   width: clamp(200px, 40vw, 500px);
   height: clamp(160px, 32vw, 400px);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-lg-dark);
+  box-shadow: var(--shadow-lg);
   object-fit: cover;  
 }
 
@@ -672,7 +672,7 @@ Project Page styles
 
 .title-project-page {
   margin: 0 auto;
-  padding: 8% 4% 20px;
+  padding: 8% 4%;
   text-transform: uppercase;
   background: var(--bg-off-white); 
   }
@@ -680,15 +680,25 @@ Project Page styles
 .title-project-page h1::after {
   content: '';
   display: block;
-  background: var(--accent);
+  background: var(--accent-2);
   height: 4px;
-  width: clamp(250px, 27vw, 350px);
+  width: clamp(175px, 27vw, 450px);
   position: relative;
   top: 5px;
   }
 
 .title-project-page h1 {
-  font-weight: 400;
+  font-weight: 350;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .title-project-page h1 {
+    font-size: 2.5rem;
+  }
+  .title-project-page h1::after {
+    width: 215px;
+}
 }
 
 /*
@@ -731,25 +741,22 @@ Project Page styles
 .filter-buttons {
   display: flex;
   flex-wrap: wrap;
-  /*
+  
   gap: 12px;
-  */
+ 
 }
 
 .filter-btn {
   padding: 12px 12px;
   border: 1px solid var(--primary);
-  
+  border-radius: 5px;
   background: var(--background);
   color: var(--primary);
-  font-family: var(--font-body);
+  font-family: var(--font-monospace);
   font-size: 0.95rem;
   font-weight: 600;
   text-transform: uppercase; 
-  /* 
-  border-radius: 5px;
   letter-spacing: 0.05em; 
-  */
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -800,11 +807,9 @@ Project Page styles
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-template-rows: 250px;
-  grid-auto-rows: 250px;
-  /* 
+  grid-template-rows: 350px;
+  grid-auto-rows: 350px;
   gap: 10px;
-  */
 }
 
 .project-card {
@@ -812,17 +817,16 @@ Project Page styles
   background: var(--background);
   border: 2px solid var(--border);
   padding: 10px;
-  /* 
   border: 2px solid var(--primary);
   border-radius: var(--radius-md);
   padding: 20px; 
-  */
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
   opacity: 1;
   transform: scale(1);
   animation: fadeInUp 0.6s ease-out backwards;
+  
 }
 
 .project-card::after {
@@ -898,16 +902,16 @@ Project Page styles
 
 .skill-tags {
   display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
   position: absolute;
   bottom: 10px;
-  flex-wrap: wrap;
-  gap: 8px;
   margin-bottom: 20px;
 }
 
 .skill-tag {
   padding: 6px 14px;
-  background: var(--secondary);
+  /* background: var(--accent); */
   border: 1px solid var(--border);
   font-size: 0.8rem;
   font-weight: 400;
@@ -950,10 +954,6 @@ Project Page styles
 @media (max-width: 768px) {
    .container {
       padding: 40px 20px;
-  }
-
-  h1 {
-      font-size: 3rem;
   }
 
   .projects-grid {

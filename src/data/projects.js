@@ -5,10 +5,10 @@ export const projects = [
         title: "Cornucopia College",
         type: "Social Vision & Strategy",
         image: "../../tech.jpg",
-        description: "A micro-college integrating agriculture, culinary arts, sustainability, and food policy. Students experience the entire farm-to-table process while specializing in climate change, business, culinary arts, or policy. Inspired by Deep Springs College and Wageningen University.",
+        description: "An imaginative design for a 'farm-to-table' micro-college.",
         skillTags: ["social", "wellness"],
         year: "2024",
-        tags_display: ["Design", "Teamwork"]
+        tags_display: ["design", "social"]
     },
     {
         id: 2,
@@ -16,10 +16,10 @@ export const projects = [
         title: "The Tennis Journey Workshop",
         type: "Social Vision & Strategy",
         image: "../../car-barn.jpg",
-        description: "A workshop series for StarrMark Tennis Academy addressing athlete burnout among high school players. Combines college athlete panels with reflective exercises on motivation, priorities, and goal-setting to promote lifelong engagement with tennis.",
+        description: "I delivered a workshop to address high burnout amongst high school athletes.",
         skillTags: ["social"],
         year: "2024",
-        tags_display: ["Design", "Facilitation", "Consulting"]
+        tags_display: ["design", "facilitation", "consulting"]
     },
     {
         id: 3,
@@ -27,10 +27,10 @@ export const projects = [
         title: "Community-University Model",
         type: "Social Vision & Strategy",
         image: "../../social.jpg",
-        description: "A paradigm shift from 'education for self-enlargement' to 'education as collective healing.' Proposes publicly-funded universities centered on geographic communities, with students as public servants addressing community-defined needs through democratic dialogue.",
-        skillTags: ["social"],
+        description: "Designed a 'community-university' that centers the needs of the community and promotes democratic practice.",
+        skillTags: ["social", "design", "policy"],
         year: "2024",
-        tags_display: ["Public Education", "Community Engagement", "Democratic Practice"]
+        tags_display: ["design", "social", "policy"]
     },
     {
         id: 4,
@@ -38,10 +38,10 @@ export const projects = [
         title: "Teaching English in France",
         type: "Social Vision & Strategy",
         image: "../../social.jpg",
-        description: "Independently implemented English lessons for oral and written expression at Académie d'Aix-Marseille. Provided one-on-one tutoring for standardized exams and job interviews, adapting instruction for diverse learner needs.",
-        skillTags: ["social"],
+        description: "Developed English curriculum centered around games and reflection.",
+        skillTags: ["social", "curriculum design"],
         year: "2022-2023",
-        tags_display: ["Language Teaching", "Individualized Instruction", "Assessment"]
+        tags_display: ["social", "teaching", "curriculum design"]
     },
     {
         id: 5,
@@ -49,10 +49,10 @@ export const projects = [
         title: "Pivotal Network Teacher R&D Community",
         type: "Systems & Technology",
         image: "../../social.jpg",
-        description: "Recruited 50 high school teachers from underresourced schools to create an R&D community. Conducted research interviews using Qualtrics and Google Jamboard, and designed organization website and communications using Canva.",
+        description: "Sustained community of 50 teacher-researchers and designed website.",
         skillTags: ["social", "systems"],
         year: "2019-2022",
-        tags_display: ["Teacher Development", "Research Design", "Community Building"]
+        tags_display: ["tech", "teaching"]
     },
     {
         id: 6,
@@ -63,7 +63,7 @@ export const projects = [
         description: "analysis of Rutgers",
         skillTags: ["social"],
         year: "2025",
-        tags_display: ["place-based", "Community Building"]
+        tags_display: ["social"]
     },
     {
         id: 7,
@@ -74,7 +74,7 @@ export const projects = [
         description: "analysis of the emerging technology Learning and Employment Records (LERS)",
         skillTags: ["systems"],
         year: "2025",
-        tags_display: ["Technology", "Educational Innovation"]
+        tags_display: ["tech"]
     },
     {
         id: 8,
@@ -85,6 +85,6 @@ export const projects = [
         description: "Analyzing the impact of AI and the enrollment management industry",
         skillTags: ["systems"],
         year: "2025",
-        tags_display: ["Technology", "Educational Policy"]
+        tags_display: ["tech", "policy"]
     }
 ];
