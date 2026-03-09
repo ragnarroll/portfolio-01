@@ -159,8 +159,12 @@ header {
   margin: auto;
   align-items: center;
   justify-content: space-between;
-  height: 12vh;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  height: 80px;
   width: 100%;
+  padding-right: 5%;
   background: var(--accent);
 }
 
@@ -169,6 +173,13 @@ header {
   font-size: 1.5rem;
   letter-spacing: 0.5px;
   padding: 0 var(--spacing-sm) 0 var(--spacing-lg);
+}
+.header-title a {
+  color: white;
+}
+
+.header-title a:hover {
+  color: var(--accent);
 }
 
 /* 
@@ -202,7 +213,7 @@ nav{
 	  position: relative;
     text-transform: underline;
     padding: 0.5rem 1rem 0.5rem 1rem;
-    color: var(--primary);
+    color: white;
     border-radius: 10px;
     font-weight: 700;
     font-size: 16px;
@@ -213,7 +224,7 @@ nav{
 	}
 
   .nav-item:hover {
-    color: var(--hover);
+    color: var(--accent);
   }
 
   .nav-item::before {
@@ -223,7 +234,7 @@ nav{
 		left: 0;
 		width: 100%;
 		height: 2px;
-		background: var(--hover);
+		background: var(--accent);
 		opacity: 0;
 		transition: opacity 0.3s ease;
 		z-index: -1;
@@ -304,6 +315,7 @@ nav ul {
 
 nav a {
   color: var(--text);
+  text-transform: uppercase;
   padding: var(--spacing-xs) 0;
   position: relative;
 }
@@ -338,16 +350,92 @@ section {
 }
 
 
-
 /* 
 ======================================================================
 ======================================================================
-Hero Section 
+Hero 
 ======================================================================
 ======================================================================
 */
 
 .hero {
+  z-index: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  /* margin-top: -55px;*/
+  padding-top: 10%;
+  padding-left: 10%;
+  display: flex;
+  justify-content: left;
+  height: 120vh;
+}
+
+.hero::before {
+  content: '';
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120vh;
+  background: var(--background-darkest); 
+  opacity: 0.5;
+}
+
+/*
+.hero::after {
+  content: '';
+  z-index: 11;
+  position: absolute;
+  bottom: 0;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  height: 25px;
+  background: #fbd044;
+  opacity: 0.5;
+} 
+  */
+
+.hero-textbox {
+  z-index: 100;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.hero-textbox h3{
+  z-index: 100;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: white;
+}
+.hero-textbox p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  z-index: 100;
+  color: white;
+}
+
+
+/* 
+======================================================================
+my focus
+======================================================================
+*/
+
+.focus {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* 
+======================================================================
+======================================================================
+About Me Page 
+======================================================================
+======================================================================
+*/
+
+.about {
   z-index: 0;
   padding: 5% 10%;
   display: flex;
@@ -358,7 +446,7 @@ Hero Section
   height: 80vh;
 }
 
-.hero::after {
+.about::after {
   content: '';
   z-index: 11;
   position: absolute;
@@ -370,20 +458,20 @@ Hero Section
   opacity: 0.5;
 }
 
-.hero-textbox {
+.about-textbox {
   flex: 1;
   z-index: 50;
   text-align: left;
 }
 
-.hero-textbox h3 {
+.about-textbox h3 {
   color: var(--text);
   font-size: clamp(1.5rem, 6vw, 2rem);
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
   margin-bottom: var(--spacing-sm);
 }
 
-.hero-textbox p {
+.about-textbox p {
   color: var(--text);
   font-size: clamp(1rem, 3vw, 1.25rem);
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
@@ -391,7 +479,7 @@ Hero Section
   margin-bottom: var(--spacing-xs);
 }
 
-.hero-profile {
+.about-profile {
   flex: 1;
   display: flex;
   justify-content: flex-end;
@@ -410,11 +498,11 @@ Hero Section
 */
 
 @media (max-width: 900px) {
-  .hero {
+  .about {
     flex-direction: column;
     text-align: center;
   }
-  .hero-profile {
+  .about-profile {
     justify-content: center;
   }
   .profile-pic {
@@ -448,10 +536,9 @@ Parallax/About Me
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 20px 24px;
-  margin: 50vh auto;
   padding: 40px 40px;
   font-family: var(--font-body);
-  background: var(--background);
+  background: var(--bg-off-white);
   border-radius: var(--radius-lg); 
   text-align: left;
   /* 
@@ -507,7 +594,7 @@ Parallax/About Me
   position: relative;
   display: inline;
   grid-column: span 3;
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-lg);
 }
 
 .container-title h2 {
@@ -538,10 +625,16 @@ Parallax/About Me
 }
 
 .container-text {
-  grid-column: span 2;
+  grid-column: span 1;
+  border: 2px black solid;
   font-family: var(--font-body);
   min-width: 0;
   line-height: 1.1;
+}
+
+.container-text p {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  margin-bottom: var(--spacing-sm);
 }
 
 .container-text h2 {
@@ -556,8 +649,20 @@ Parallax/About Me
   margin-bottom: var(--spacing-xs);
 }
 
+.container-link {
+  text-align: right;
+}
+
+.container-link a{
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  text-decoration: underline;
+}
+
+
+
 .container-img {
-  grid-column: span 1;
+  grid-column: span 2;
+  border: 2px black solid;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
