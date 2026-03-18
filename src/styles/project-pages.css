@@ -1,0 +1,235 @@
+
+.containerProjectPage{
+  max-width: 1000px;
+  margin: 30px auto;
+  background: var(--background);
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: 1fr 1fr 2fr;
+  align-items: start;
+  gap: 80px 10px;
+  padding: 40px 40px;
+  font-family: var(--font-body);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--primary);
+  box-shadow: var(--shadow-lg-dark);
+  text-align: left;
+}
+
+
+.back-button{
+  margin: 50px 40px 20px;
+  font-size: 1.5rem;
+}
+
+.container-home {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 20px 24px;
+  padding: 40px 40px;
+  font-family: var(--font-body);
+  background: var(--background-light);
+  border-radius: var(--radius-lg); 
+  text-align: left;
+  /* 
+  border: 0.5px solid var(--primary); 
+  max-width: 900px;
+  box-shadow: var(--shadow-lg-dark); 
+  */
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.about-me-container{
+  /* translate: -50px 0px; */
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.about-me-container.animate-in {
+  animation: slideInLeft 0.4s ease-out forwards;
+}
+
+.my-beliefs-container{
+  translate: 50px 0px;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.my-beliefs-container.animate-in {
+  animation: slideInRight 0.4s ease-out forwards;
+}
+
+.container-title {
+  position: relative;
+  display: inline;
+  grid-column: span 3;
+  margin-bottom: var(--spacing-lg);
+}
+
+.container-title h2 {
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.container-title p {
+  margin: 0;
+  font-weight: 600;
+}
+
+
+.container-title::after {
+  content: '';
+  display: block;
+  width: 2px;
+  height: 80px;
+  background: var(--accent-2);
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+
+.light-blue.container-title::after {
+  background: var(--accent-3);
+}
+
+.container-text {
+  grid-column: span 1;
+  border: 2px black solid;
+  font-family: var(--font-body);
+  min-width: 0;
+  line-height: 1.1;
+}
+
+.container-text p {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  margin-bottom: var(--spacing-sm);
+}
+
+.container-text h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: var(--spacing-xs);
+}
+
+.container-text h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: var(--spacing-xs);
+}
+
+.container-link {
+  text-align: right;
+}
+
+.container-link a{
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  text-decoration: underline;
+}
+
+
+
+.container-img {
+  grid-column: span 2;
+  border: 2px black solid;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  aspect-ratio: 4.5 / 3;
+  min-width: 0;
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.clark{
+background-image: url("../../clark-hs.jpg");
+}
+
+.healy {
+  background-image: url("../../healy-sunflare.jpg");
+}
+
+.car-barn{
+  background-image: url("../../car-barn.jpg");
+}
+
+.smaller {
+  max-width: 400px;
+}
+
+
+@media (max-width: 800px) {
+  .container-home {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .container-title,
+  .container-text,
+  .container-img {
+    grid-column: 1 / -1;
+  }
+  .container-img {
+    grid-column: 1 / -1;
+    margin: auto;  
+    width: 75%;
+  }
+  .about-me-container{
+  translate: 0px 0px;
+  opacity: 0;
+  }
+  .my-beliefs-container{
+  translate: 0px 0px;
+  opacity: 0;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .container-home {
+    grid-template-columns: 1fr;
+  }
+  .container-title,
+  .container-text,
+  .container-img {
+    grid-column: 1 / -1;
+  }
+  .container-img {
+    grid-column: 1 / -1;
+    margin: auto;  
+    width: 75%;
+  }
+   .about-me-container{
+  translate: 0px 0px;
+  opacity: 0;
+  }
+  .my-beliefs-container{
+  translate: 0px 0px;
+  opacity: 0;
+  }
+
+}

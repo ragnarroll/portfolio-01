@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro"
 import Footer from "../components/Footer.astro"
 import "../styles/global.css";
+import "../styles/home.css";
 ---
 
 <html lang="en">
@@ -22,60 +23,108 @@ import "../styles/global.css";
 
 	<div class = "hero">
 		<div class="hero-textbox">
-			<h3>Hi, I'm <br><strong>Michael</strong></h3>
-			<p>I believe education is the cornerstone of a healthy, democratic society.</p>
+			<h1>Transforming education,<br>building <em class="serif">community</em></h1>
 			<div class="orange-line"></div>
-			<em>Learning Designer, Educator, Innovator. <br>
-			Based in Washington, DC</em>
+			<h3>Michael Vincent Pasimio</h3>
+			<h4><em>Learning Designer, Educator, Innovator<br>
+			Based in Washington, DC</em></h4>
 		</div>
 		
 	</div>
 
 	
 
-<section class="mission">
-	<h3>My Mission: Redefine Education</h3>
 
-	<p>At its core, education is a meeting between human lives and public institutions.
-	<br><br>
-	This meeting is more than just a transaction; it's a lifelong experience with farreaching impacts.
-	<br><br>
-	My goal is to bring human relationships and community-building back to the core of the educational mission, designing educational systems that prioritize the health and success of not just individuals—but of entire communities.
-	</p>
+
+<section>
+	<div class="two-column-layout">
+		<div class="two-column-layout__title">
+			<h4 class="serif italics">Mission</h4>
+			<h2>My Goal</h2>
+		</div>
+		<div class="two-column-layout__content with-line">
+			<h4>Design <u>transformative education initiatives</u> that <strong>promote success</strong> for <em>all</em> students and <strong>strengthen communities.</strong></h4>
+	</div>
 </section>
 
-<section class="design-principles">
-	<h3>My Design Principles</h3>
+<section class="light-gradient-background">
+	<div class="section-title">
+		<h4 class="serif italics">Values</h4>
+		<h2>My Design Principles</h2>
+	</div>
+		
+	</div>
+	<div class="design-principles">
 		<div class="principle">
 			<div class="principle-header">
 				<img src="../../expand.png" class="expand-icon" style="width: 30px; height: 30px;" alt="Expand Icon">
 				<img src="../../collapse.png" class="collapse-icon" style="width: 30px; height: 30px;" alt="Collapse Icon">
-				<h4>radical inclusivity</h4>
+				<h3>radical inclusivity</h3>
 			</div>
 			<div class="principle-text">
 				<p>ai text: Designing with empathy and a deep understanding of human needs, behaviors, and emotions.</p>
 			</div>
-	</div>
-	<div class="principle">
+		</div>
+		<div class="principle">
 			<div class="principle-header">
 				<img src="../../expand.png" class="expand-icon" style="width: 30px; height: 30px;" alt="Expand Icon">
 				<img src="../../collapse.png" class="collapse-icon" style="width: 30px; height: 30px;" alt="Collapse Icon">
-				<h4>system-thinking</h4>
+				<h3>systems-thinking</h3>
 			</div>
 			<div class="principle-text">
 				<p>ai text: Prioritizing the well-being and success of communities, fostering collaboration and collective growth.</p>
 			</div>
-	</div>
-	<div class="principle">
+		</div>
+		<div class="principle">
 			<div class="principle-header">
 				<img src="../../expand.png" class="expand-icon" style="width: 30px; height: 30px;" alt="Expand Icon">
 				<img src="../../collapse.png" class="collapse-icon" style="width: 30px; height: 30px;" alt="Collapse Icon">
-				<h4>human-centered technology</h4>
+				<h3>human-centered technology</h3>
 			</div>
 			<div class="principle-text">
 				<p>ai text: Striving to create inclusive and accessible educational experiences that empower all learners.</p>
+			</div>
 		</div>
+	</div>
+</section>
 
+<section class="gradient-background">
+	<div class="section-title">
+		<h4 class="serif italics">Process</h4>
+		<h2>Selected Works</h2>
+	</div>
+	
+	<div class="two-column-layout">
+		<div class="two-column-layout__title">
+			<a href="/projects/the-tennis-journey">
+				<div class="selected-works-img project-1 smaller">
+				</div>
+			</a>
+		</div>
+		<div class="two-column-layout__content">
+			<h3><u>A College for Equality</u></h3>
+			<p>A case study of Livingston College at Rutgers University, an experimental college in the 70s designed for affirmative action, engaged scholarship, and social change.</p>	
+		</div>
+		<div class="two-column-layout__title">
+			<a href="/projects/the-tennis-journey">
+				<div class="selected-works-img project-2 smaller">
+				</div>
+			</a>
+		</div>
+		<div class="two-column-layout__content">
+			<h3><u>Lifelong Learning through Sports</u></h3>
+			<p>A workshop series with high school athletes, college athletes, and parents on building a long term relationship with movement and preventing burnout.</p>
+		</div>
+		<div class="two-column-layout__title">
+			<a href="/projects/the-tennis-journey">
+				<div class="selected-works-img project-3 smaller"></div>
+			</a>
+		</div>
+		<div class="two-column-layout__content">
+			<h3><u>The Pivotal Network</u></h3>
+			<p>A co-designed network of teachers at Title I schools, designed to promote student success and college attainment through professional development.</p>
+		</div>
+	</div>
 </section>
 
 	<Footer />
