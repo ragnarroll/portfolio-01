@@ -37,14 +37,14 @@ About Me Page
 }
 
 .about-textbox h3 {
-  color: var(--text);
+  color: var(--primary);
   font-size: clamp(1.5rem, 6vw, 2rem);
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
   margin-bottom: var(--spacing-sm);
 }
 
 .about-textbox p {
-  color: var(--text);
+  color: var(--primary);
   font-size: clamp(1rem, 3vw, 1.25rem);
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   line-height: 1.6;

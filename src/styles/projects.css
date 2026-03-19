@@ -46,7 +46,7 @@ Project Page styles
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 20px;
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .filter-buttons {
@@ -93,7 +93,7 @@ Project Page styles
 
 .filter-btn:hover,
 .filter-btn.active {
-  color: var(--secondary);
+  color: var(--accent-2);
   transform: translateY(-2px);
 }
 
@@ -207,7 +207,7 @@ Project Page styles
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 24px;
-  color: var(--text);
+  color: var(--primary);
   font-weight: 300;
 }
 
@@ -227,7 +227,7 @@ Project Page styles
   font-size: 0.8rem;
   font-weight: 400;
   letter-spacing: 0.05em;
-  color: var(--text);
+  color: var(--primary);
 }
 
 
@@ -285,7 +285,7 @@ Project Page styles
   text-align: center;
   padding: 80px 20px;
   font-size: 1.2rem;
-  color: var(--text);
+  color: var(--primary);
   opacity: 0;
   animation: fadeIn 0.5s ease-out forwards;
 }

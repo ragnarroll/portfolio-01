@@ -59,32 +59,24 @@ Hero
   padding-top: var(--spacing-lg);
   /* text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); */
 }
+
+/*
 .hero-textbox h1{
   z-index: 100;
   font-size: 5rem;
   font-weight: 350;
   color: var(--primary);
 }
-
+*/
 .hero-textbox h1 em{
-  font-size: 5rem;
-  letter-spacing: 0.05em;
+  font-size: clamp(2rem, 5vw, 7rem);
+  letter-spacing: 0.03em;
 }
 
-.hero-textbox p {
-  font-size: 1.25rem;
-  z-index: 100;
-  color: var(--primary);
+.hero-textbox h4{
+  font-weight: 350;
 }
 
-.hero-textbox p strong {
-  font-size: 1.25rem;
-  color: var(--primary);
-}
-
-.hero-textbox em{
-  font-size: 1rem;
-}
 
 .orange-line {
   z-index: 11;
@@ -179,9 +171,12 @@ my mission
   font-size: clamp(0.75rem, 2vw, 1.25rem);
   font-family: var(--font-heading);
   font-weight: 700;
-  color: var(--text-secondary);
   letter-spacing: 0.1em;
   line-height: 1.4;
+}
+
+.two-column-layout__title {
+  color: var(--secondary);
 }
 
 .two-column-layout__content {
@@ -195,7 +190,8 @@ my mission
 }
 
 .two-column-layout__content h4{
-  font-size: 3rem;
+  /* font-size: 3rem;*/
+  font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 350;
   line-height: 1.4;
 }
@@ -280,6 +276,14 @@ my design principles
   margin-top: 15px;
 }
 
+
+/*
+======================================================================
+my approach
+======================================================================
+*/
+
+
 /*
 ======================================================================
 selected works
@@ -306,4 +310,193 @@ selected works
 
 .project-3{
   background-image: url("../../tree.jpg");
+}
+
+
+/* 
+======================================================================
+======================================================================
+Approach Steps Timeline
+======================================================================
+======================================================================
+*/
+
+.approach-steps {
+  position: relative;
+  padding: var(--spacing-lg) var(--spacing-md);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Center connecting line */
+
+.approach-steps::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: calc(var(--spacing-lg) + 60px);
+  bottom: calc(var(--spacing-lg) + 150px);
+  width: 2px;
+  background: var(--accent);
+  transform: translateX(-50%);
+  display: none;
+}
+
+
+
+.step::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 17%; 
+  left: 50%;
+  background: var(--accent);
+  transform: translateX(-50%) translateY(50%) rotate(-25deg);
+}
+
+.step:nth-child(even)::before {
+  transform: translateX(-50%) translateY(50%) rotate(20deg);
+}
+
+.step:nth-child(5)::before {
+  display: none;
+}
+
+/* Step container */
+.step {
+  display: grid;
+  grid-template-columns: 1fr 60px 60px 1fr;
+  margin-bottom: var(--spacing-lg);
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+/* Step content area (text) */
+.step-content {
+  padding: var(--spacing-md);
+  background: var(--background-light);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.step-content {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.step-content h3 {
+  margin-bottom: var(--spacing-sm);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+.step-content p {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+/* Step indicator circle */
+.step-indicator {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: var(--accent);
+  border: 3px solid var(--background);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--background);
+  position: relative;
+  z-index: 10;
+  transition: all var(--transition-base);
+}
+
+.step:nth-child(odd) .step-content {
+  grid-column: 1 span 2;
+  text-align: right;
+}
+
+.step:nth-child(odd) .step-indicator {
+  grid-column: 2;
+}
+
+.step:nth-child(even) .step-content {
+  grid-column: 4;
+}
+
+.step:nth-child(even) .step-indicator {
+  grid-column: 3;
+}
+
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .approach-steps {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  .approach-steps::before {
+    display: flex;
+  }
+
+  .step::before{
+    display: none;
+  }
+
+
+  .step {
+    grid-template-columns: 50px 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .step:nth-child(odd),
+  .step:nth-child(even) {
+    grid-template-columns: 50px 1fr;
+  }
+
+  .step:nth-child(odd) .step-content,
+  .step:nth-child(even) .step-content {
+    order: 2;
+    grid-column: 2;
+    align-self: center;
+    text-align: left;
+  }
+
+  .step:nth-child(odd) .step-indicator,
+  .step:nth-child(even) .step-indicator {
+    order: 1;
+    grid-column: 1;
+    align-self: center;
+  }
+
+  .approach-steps::before {
+    left: 41px;
+    top: calc(var(--spacing-md) + 50px);
+    bottom: calc(var(--spacing-md) + 100px);
+  }
+
+  .step-indicator {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .step-content {
+    padding: var(--spacing-sm);
+  }
+
+  .step-content h3 {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+  }
+
+  .step-content p {
+    font-size: clamp(0.9rem, 1.3vw, 1rem);
+  }
 }
