@@ -68,9 +68,58 @@ Hero
   color: var(--primary);
 }
 */
+
 .hero-textbox h1 em{
   font-size: clamp(2rem, 5vw, 7rem);
   letter-spacing: 0.03em;
+}
+
+.rotating-word {
+  display: inline-block;
+  min-width: 250px;
+  height: 1.2em;
+  overflow: hidden;
+  position: relative;
+  vertical-align: text-bottom;
+  line-height: 1.2;
+}
+
+.rotating-word span {
+  display: block;
+  height: 1.2em;
+  line-height: 1.2;
+  font-family: var(--font-serif);
+  animation: scrollWords 2.5s;
+}
+
+@keyframes scrollWords {
+  0% {
+    transform: translateY(-100%);
+  }
+  20% {
+    transform: translateY(-100%);
+  }
+  25% {
+    transform: translateY(-200%);
+  }
+  45% {
+    transform: translateY(-200%);
+  }
+  50% {
+    transform: translateY(-300%);
+  }
+  70% {
+    transform: translateY(-300%);
+  }
+  75% {
+    transform: translateY(-400%);
+  }
+  95% {
+    transform: translateY(-400%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
 }
 
 .hero-textbox h4{
@@ -241,14 +290,14 @@ my design principles
 }
 
 .expand-icon {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.1s ease;
   flex-shrink: 0;
 }
 
 .collapse-icon {
   display: none;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.1s ease;
   flex-shrink: 0;
 }
 
@@ -266,7 +315,9 @@ my design principles
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
+  transition: max-height 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              opacity 0.4s ease,
+              margin-top 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   margin-top: 0;
 }
 
@@ -277,40 +328,7 @@ my design principles
 }
 
 
-/*
-======================================================================
-my approach
-======================================================================
-*/
 
-
-/*
-======================================================================
-selected works
-======================================================================
-*/
-
-.selected-works-img {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  aspect-ratio: 4.5 / 3;
-  box-shadow: var(--shadow-sm);
-}
-
-.project-1{
-  background-image: url("../../social.jpg");
-}
-
-.project-2{
-  background-image: url("../../tech.jpg");
-}
-
-.project-3{
-  background-image: url("../../tree.jpg");
-}
 
 
 /* 
@@ -323,8 +341,7 @@ Approach Steps Timeline
 
 .approach-steps {
   position: relative;
-  padding: var(--spacing-lg) var(--spacing-md);
-  max-width: 1000px;
+  padding-top: var(--spacing-lg);
   margin: 0 auto;
 }
 
@@ -380,23 +397,18 @@ Approach Steps Timeline
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.step-content {
   box-shadow: var(--shadow-lg);
-  transform: translateY(-4px);
-}
-
-.step-content h3 {
-  margin-bottom: var(--spacing-sm);
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
 }
 
 .step-content p {
-  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-  color: var(--secondary);
-  line-height: 1.6;
+  font-family: var(--font-body);
 }
+
+.step-content h3 {
+  font-family: var(--font-primary);
+  font-weight: 500;
+}
+
 
 /* Step indicator circle */
 .step-indicator {
@@ -499,4 +511,33 @@ Approach Steps Timeline
   .step-content p {
     font-size: clamp(0.9rem, 1.3vw, 1rem);
   }
+}
+
+
+/*
+======================================================================
+selected works
+======================================================================
+*/
+
+.selected-works-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 4.5 / 3;
+  box-shadow: var(--shadow-sm);
+}
+
+.project-1{
+  background-image: url("../../social.jpg");
+}
+
+.project-2{
+  background-image: url("../../tech.jpg");
+}
+
+.project-3{
+  background-image: url("../../tree.jpg");
 }

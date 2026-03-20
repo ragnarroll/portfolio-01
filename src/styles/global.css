@@ -18,6 +18,8 @@
   --accent-2: #a3f7ff;
   --accent-3: #EBC2A9;
 
+  --border: #9c9191;
+
   /* 
   --accent-2: #E7F7FD;
   --accent-2: #EBC2A9; 
@@ -29,12 +31,18 @@
   */
   
   /* Typography */
-  --font-primary: 'K2D', 'Avenir', 'Abel', 'Lato', 'Montserrat', sans-serif;
-  --font-body: 'Abel', 'Work Sans', sans-serif;
+  --font-primary:  'Avenir', 'Abel', 'Lato', 'Montserrat', sans-serif;
   --font-heading: 'K2D', 'Avenir', 'Abel', 'Lato', 'Montserrat', sans-serif;
+  --font-body: 'Abel', 'Work Sans', sans-serif;
   --font-serif: 'Georgia', 'Times New Roman', Times, serif;
   --font-monospace: 'Courier New', Courier, monospace;
   
+  --font-size-xs: clamp(0.9rem, 1.3vw, 1rem);
+  --font-size-sm: clamp(1rem, 2vw, 1.5rem);
+  --font-size-md: clamp(1.25rem, 3vw, 2.2rem);
+  --font-size-lg: clamp(2rem, 4vw, 3.5rem);
+  --font-size-xl: clamp(2rem, 5vw, 7rem);
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
@@ -50,7 +58,7 @@
   /* Shadows */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
-  --shadow-lg: 5px 5px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 5px 5px 0px rgba(0, 0, 0, 0.1);
   --shadow-lg-dark: -12px 12px 0px rgba(26, 26, 26, 0.1);
   
   /* Transitions */
@@ -110,6 +118,7 @@ h4 {
 }
 
 p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
   color: var(--primary);
 }
 
@@ -261,7 +270,7 @@ Footer and Header
 
 .footer h1 {
   color: white;
-  font-family: var(--font-primary);
+  font-family: var(--font-heading);
   font-size: 2rem;
   margin: 0;
   padding: 0 var(--spacing-sm) var(--spacing-xs) 0;
@@ -270,7 +279,7 @@ Footer and Header
 /* Header */
 header {
   display: flex;
-  margin: auto;
+  margin: var(--spacing-xs) auto;
   align-items: center;
   justify-content: space-between;
   position: absolute;
@@ -282,13 +291,13 @@ header {
 }
 
 .header-title {
-  font-family: var(--font-primary);
   font-size: 1.5rem;
   letter-spacing: 0.5px;
   padding: 0 var(--spacing-sm) 0 var(--spacing-lg);
 }
 .header-title a {
   color: var(--primary);
+  font-family: var(--font-heading);
 }
 
 .header-title a:hover {
@@ -328,6 +337,7 @@ nav{
     padding: 0.5rem 1rem 0.5rem 1rem;
     color: var(--primary);
     border-radius: 10px;
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 16px;
     transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 0.3s ease;
