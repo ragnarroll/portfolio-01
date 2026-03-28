@@ -12,17 +12,20 @@ Hero
   z-index: 0;
   position: relative;
   background-color: var(--background-light);
+  /*
   background-image: url("../assets/profile-line.png");
-  background-size: auto 90%;
+  background-size: auto 80%;
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: bottom right 15%; 
+  */
   /* margin-top: -55px;*/
-  padding: 10%;
-  padding-top: 150px;
-  display: flex;
-  gap: var(--spacing-md);
+  padding: 150px 10% 150px 10%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  gap: 0px;
   justify-content: left;
-  align-items: flex-end;
+  align-items: flex-end; 
 }
 
 .hero::before {
@@ -54,11 +57,26 @@ Hero
   */
 
 .hero-textbox {
-  z-index: 100;
-  width: 60%;
-  padding-top: var(--spacing-lg);
+  z-index: 1;
+  width: 100%;
+  background: transparent;
   /* text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); */
 }
+
+.hero-image img {
+  z-index: 10;
+  
+  width: 100%;
+  height: 100%;
+  
+}
+
+/*
+background-image: url("../assets/profile-line-2.png");
+  background-size: cover;
+  overflow: visible;
+  background-repeat: no-repeat;
+  background-position: bottom center; */
 
 /*
 .hero-textbox h1{
@@ -68,6 +86,11 @@ Hero
   color: var(--primary);
 }
 */
+
+.hero-textbox h1 {
+  font-weight: 300;
+}
+
 
 .hero-textbox h1 em{
   font-size: clamp(2rem, 5vw, 7rem);
@@ -123,18 +146,17 @@ Hero
 }
 
 .hero-textbox h4{
-  font-weight: 350;
+  font-weight: 300;
 }
-
 
 .orange-line {
   z-index: 11;
   left: 0;
   width: 250px;
-  height: 5px;
+  height: 10px;
   background: var(--accent);
-  border-radius: var(--radius-sm);
-  margin-top: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  margin-top: var(--spacing-md);
   margin-bottom: var(--spacing-sm);
 }
 
@@ -166,7 +188,7 @@ Hero
     padding: 10%;
     padding-top: 100px;
   }
-  
+  /*
   .hero-textbox h3 {
     font-size: 1.25rem;
   }
@@ -182,9 +204,10 @@ Hero
   .hero-textbox em {
     font-size: 0.9rem;
   }
-
+*/
   .orange-line {
   width: 150px;
+  margin-bottom: var(--spacing-lg);
   }
 }
 

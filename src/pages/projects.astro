@@ -25,6 +25,19 @@ import "../styles/projects.css";
 
     <div class="container-project gradient-background">
         <div class="filter-section">
+            <div class="filter-label">Filter by Skills</div>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="social">Web Design & Development</button>
+            <button class="filter-btn" data-filter="social">Applied AI</button>
+            <button class="filter-btn" data-filter="social">Data, Metrics, & Reporting</button>
+            <button class="filter-btn" data-filter="social">Teaching</button>
+            <button class="filter-btn" data-filter="systems">Project Management</button>
+            <button class="filter-btn" data-filter="design">Design Thinking</button>
+            <button class="filter-btn" data-filter="tech">Curriculum Design</button>
+            <button class="filter-btn" data-filter="policy">Research</button>
+        </div>
+        <div class="filter-section">
+            <div class="filter-label">Filter by Themes</div>
             <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="social">Social</button>
@@ -47,15 +60,17 @@ import "../styles/projects.css";
                     >
                         <div class="project-type">{project.type}</div>
                         <h2 class="project-title">{project.title}</h2>
-                        <img class = "project-image" src={project.image} alt={project.title} style={`view-transition-name: ${project.slug}`}/>
+                        
                         <p class="project-description">{project.description}</p> 
                         <div class="skill-tags">
                             {project.tags_display.map(tag => (
                                 <span class="skill-tag">{tag}</span>
                             ))}
                         </div>
-                       
                     </div>
+                        <div>
+                            <img class = "project-image" src={project.image} alt={project.title} style={`view-transition-name: ${project.slug}`}/>
+                       </div>
                 </a>
             ))}
            

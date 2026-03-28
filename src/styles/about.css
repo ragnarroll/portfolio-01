@@ -7,6 +7,69 @@ About Me Page
 ======================================================================
 */
 
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+  gap: var(--spacing-sm);
+  max-width: 1200px;
+  margin: var(--spacing-sm) auto;
+  padding: var(--spacing-md);
+}
+
+.intro {
+  grid-template-columns: 2fr 1fr;
+  margin-top: var(--spacing-xl);
+}
+
+.two-column-layout__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: center;
+}
+
+.hometown {
+  grid-template-columns: 1fr 1fr;
+}
+
+.featured {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .two-column-layout {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  .intro {
+    margin-top: var(--spacing-lg);
+  }
+  
+}
+
+.writing {
+  grid-template-columns: 1fr;
+  padding-bottom: 0px;
+}
+
+.writing-display {
+  padding-top: 0px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.writing-display-card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  gap: 5px;
+}
+
+
+
+
 .about {
   z-index: 0;
   padding: 5% 10%;
